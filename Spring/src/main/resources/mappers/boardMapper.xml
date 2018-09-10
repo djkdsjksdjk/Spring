@@ -15,6 +15,7 @@
     from
     tbl_board
     where bno=#{bno}
+    
   </select>
   
   <update id="update">
