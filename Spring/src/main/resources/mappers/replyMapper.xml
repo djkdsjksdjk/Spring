@@ -8,7 +8,7 @@
 select *
 from tbl_reply
 where bno = #{bno}
-order by rno 
+order by rno desc
 
 </select>
   <insert id="create">
@@ -24,10 +24,26 @@ order by rno
   where rno = #{rno}
   </update>
   
-  <delete id="">
+  <delete id="delete">
   delete 
   from tbl_reply
   where rno = #{rno}
   </delete>
+  
+  <select id="listPage" resultType="ReplyVO">
+  select *
+  from tbl_reply
+  where
+  bno = #{bno}
+  order by rno desc
+  limit #{criteria.page}, #{criteria.perPageNum}
+  </select>
+  
+  <select id="count" resultType="int">
+  select count(bno)
+  from tbl_reply
+  where bno = #{bno}
+  
+  </select>
      
 </mapper>

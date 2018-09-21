@@ -7,7 +7,7 @@ public class ReplyVO {
 	private int rno;
 	private int bno;
 	private String replytext;
-	private String reply;
+	private String replyer;
 	private Date regdate;
 	private Date updatedate;
 	
@@ -32,11 +32,11 @@ public class ReplyVO {
 	public void setReplytext(String replytext) {
 		this.replytext = replytext;
 	}
-	public String getReply() {
-		return reply;
+	public String getReplyer() {
+		return replyer;
 	}
-	public void setReply(String reply) {
-		this.reply = reply;
+	public void setReplyer(String replyer) {
+		this.replyer = replyer;
 	}
 	public Date getRegdate() {
 		return regdate;

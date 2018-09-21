@@ -17,9 +17,9 @@ import com.spring.domain.SampleVO;
 
 public class RestControllerSample {
 	
-	@RequestMapping("/sendVOErrorAuth")
+	@RequestMapping("/sendErrorAuth")
 	public ResponseEntity<Void> sendListAuth(){
-	return new ResponseEntity<>(HttpStatus.OK);	
+	return new ResponseEntity<>(HttpStatus.BAD_REQUEST);	
 	}
 	
 	
